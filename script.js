@@ -1,7 +1,7 @@
 'use strict';
 
 async function get_num_jokes(num, lang, cat) {
-    let url = `flask-env.eba-kizmemsb.us-east-2.elasticbeanstalk.com/api/v1/jokes?language=${lang}&number=${num}&category=${cat}`
+    let url = `http://flask-env.eba-kizmemsb.us-east-2.elasticbeanstalk.com/api/v1/jokes?language=${lang}&number=${num}&category=${cat}`
     console.log(url)
     let elements = await fetch(url)
         .then(response => response.json())
